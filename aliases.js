@@ -1,0 +1,9 @@
+var ALIASES = {};
+ALIASES['crypto'] = {};
+ALIASES['hex'] = {};
+ALIASES['libc'] = {};
+ALIASES['rand'] = {};
+ALIASES['rand'] = {};
+ALIASES['rustc_serialize'] = {};
+ALIASES['slack_verify'] = {};
+ALIASES['time'] = {};
