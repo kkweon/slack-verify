@@ -1,5 +1,8 @@
 [package]
 name = "slack-verify"
+description = "Verify Slack requests"
+homepage = "https://github.io/kkweon/slack-verify"
+repository = "https://github.com/kkweon/slack-verify"
 version = "0.1.0"
 authors = ["Kyung Mo Kweon <kkweon@gmail.com>"]
 edition = "2018"
