@@ -1,4 +1,6 @@
 # slack-verify
+[![Build Status](https://travis-ci.com/kkweon/slack-verify.svg?branch=master)](https://travis-ci.com/kkweon/slack-verify)
+[![Coverage Status](https://coveralls.io/repos/github/kkweon/slack-verify/badge.svg?branch=master)](https://coveralls.io/github/kkweon/slack-verify?branch=master)
 
 [Read the official documentation from Slack](https://api.slack.com/docs/verifying-requests-from-slack)
 

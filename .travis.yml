@@ -3,16 +3,23 @@ rust:
   - stable
   - beta
   - nightly
+
 matrix:
   allow_failures:
     - rust: nightly
   fast_finish: true
 
+before_cache: |
+  if [[ "$TRAVIS_RUST_VERSION" == nightly ]]; then
+    RUSTFLAGS="--cfg procmacro2_semver_exempt" cargo install cargo-tarpaulin
+  fi
 
-after_success: |
-    cargo doc \
-    && echo '<meta http-equiv=refresh content=0;url=slack_verify/index.html>' > target/doc/index.html
-
+after_success:
+    - cargo doc && echo '<meta http-equiv=refresh content=0;url=slack_verify/index.html>' > target/doc/index.html
+    - |
+        if [[ "$TRAVIS_RUST_VERSION" == nightly ]]; then
+            cargo tarpaulin --ciserver travis-ci --coveralls $TRAVIS_JOB_ID
+        fi
 
 deploy:
     provider: pages

@@ -1,11 +1,21 @@
 [package]
 name = "slack-verify"
 description = "Verify Slack requests"
-homepage = "https://github.io/kkweon/slack-verify"
+documentation = "https://kkweon.github.io/slack-verify/"
+homepage = "https://kkweon.github.io/slack-verify/"
 repository = "https://github.com/kkweon/slack-verify"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Kyung Mo Kweon <kkweon@gmail.com>"]
 edition = "2018"
+license = "MIT"
+readme = "README.md"
+categories = ["authentication"]
+
+[badges]
+travis-ci = { repository = "kkweon/slack-verify" }
+coveralls = { repository = "kkweon/slack-verify" }
+
+
 
 [dependencies]
 rust-crypto = "0.2.36"         # A (mostly) pure-Rust implementation of various common cryptographic algorithms.
